@@ -2,8 +2,9 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters
 import requests
 
-BOT_TOKEN = "8564797155:AAEkPz4B9iUZ8vhOKQQT5vnhPKWkIjRelTo"
+import os
 
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 def get_usdt_price():
     try:
